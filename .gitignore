@@ -2,3 +2,6 @@
 Order Book.pyproj
 Order Book.sln
 .vs/
+
+# Python compiled files
+*.pyc
