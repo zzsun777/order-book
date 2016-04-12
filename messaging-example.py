@@ -5,8 +5,15 @@ from order import Order
 import sys
 
 def main():
-    #TODO: Implement a messaging based order book. Take in one order at a time 
-    # and return a message indicate the status
+    
+    # TODO: Create three agents:
+    
+
+    # TODO: Agents send in buy/sell orders randomly with some probablility
+
+
+    # plot how the stock changes
+
     pass
 
 if __name__ == "__main__":
