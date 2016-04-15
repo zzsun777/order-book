@@ -18,6 +18,7 @@ def main():
             if (random.random() > 0.5):
                 # make an order
                 # buy or sell?
+                # TO BE REPLACED WITH TRADING STRATEGIES
                 tradedir = random.choice(['bid','ask'])
                 # how many?
                 ordqty = random.randint(1,20)
@@ -25,14 +26,15 @@ def main():
                 tradetype = random.choice(['market', 'limit'])
                 # if limit, what is your bid/ask price
                 if tradetype == 'limit':
+                # TO BE REPLACED WITH TRADING STRATEGIES
                     limitprice = random.uniform(90,100)
                 # send in the order
                 if tradetype == 'market':
                     agent_order = {'type':'market', 'side':tradedir, 'quantity':ordqty, 'trade_id':a}
-                    print 'agent {} made a market order to {} {} orders'.format(a, tradedir, ordqty)
+                    print 'agent {} made a market order to {} {} shares'.format(a, tradedir, ordqty)
                 else:
                     agent_order = {'type':'limit', 'side':tradedir, 'quantity':ordqty, 'price':limitprice, 'trade_id':a}
-                    print 'agent {} made a limit order at {} to {} {} orders'.format(a, limitprice, tradedir, ordqty)
+                    print 'agent {} made a limit order at {} to {} {} shares'.format(a, limitprice, tradedir, ordqty)
                 
                 trades, order_in_book = order_book.process_order(agent_order, False, False)
             else:
